@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Mahyar Rezaie Poor Khalili',
-  description: 'Personal academic profile and contact information for Mahyar Rezaie Poor Khalili.',
+  description: 'Computer Engineering student at Sharif University of Technology working across data engineering, machine learning, and AI systems.',
 };
 
 export default function RootLayout({
