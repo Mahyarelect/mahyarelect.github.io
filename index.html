@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahyar Rezaie Poor Khalili — Data · ML · AI Engineering</title>
+<meta name="description" content="Mahyar Rezaie Poor Khalili — Computer Engineering at Sharif University. Backend systems, ML applications and LLM-based tools.">
+<meta name="author" content="Mahyar Rezaie Poor Khalili">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:title" content="Mahyar Rezaie Poor Khalili — Data · ML · AI Engineering">
+<meta property="og:description" content="Computer Engineering @ Sharif University · Backend · ML · AI Systems">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mahyarelect.github.io">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['Inter','system-ui','sans-serif'], mono: ['JetBrains Mono','monospace'] },
+    }
+  }
+}
+</script>
+<style>
+  ::selection{background:#0a0a0a;color:#fff}
+  .grid-pattern{background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.07) 1px, transparent 0); background-size: 24px 24px;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+  .fade-up{animation:fadeUp .7s ease both}
+  .fade-up-2{animation:fadeUp .7s .12s ease both}
+  .fade-up-3{animation:fadeUp .7s .24s ease both}
+  .card:hover{transform:translateY(-2px)}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Mahyar Rezaie Poor Khalili","affiliation":{"@type":"CollegeOrUniversity","name":"Sharif University of Technology"},"email":"mailto:mahyarelect@gmail.com","url":"https://mahyarelect.github.io","sameAs":["https://github.com/Mahyarelect","https://github.com/thisiscodecode","https://codecode.ir"]}
+</script>
+</head>
+<body class="bg-[#fcfcf9] text-[#0a0a0a] font-sans antialiased selection:bg-black selection:text-white">
+<!-- NAV -->
+<header class="sticky top-0 z-50 backdrop-blur-xl bg-[#fcfcf9]/85 border-b border-black/[0.06]">
+  <div class="max-w-[1120px] mx-auto px-6 h-[64px] flex items-center justify-between">
+    <a href="#top" class="font-black tracking-tighter text-[18px]">MRPK<span class="text-zinc-400">.</span></a>
+    <nav class="hidden md:flex items-center gap-7 text-[13px] font-medium">
+      <a href="#work" class="text-zinc-500 hover:text-black transition">Work</a>
+      <a href="#toolkit" class="text-zinc-500 hover:text-black transition">Toolkit</a>
+      <a href="#education" class="text-zinc-500 hover:text-black transition">Education</a>
+      <a href="#contact" class="bg-black text-white px-4 py-2 rounded-full text-xs font-semibold hover:opacity-90 transition">Get in touch →</a>
+    </nav>
+    <button id="menuBtn" class="md:hidden p-2 border rounded-xl bg-white" aria-label="Menu">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h12M3 12h12"/></svg>
+    </button>
+  </div>
+  <div id="mobileNav" class="hidden md:hidden border-t bg-white px-6 py-4 space-y-3 text-sm">
+    <a href="#work" class="block py-1">Work</a><a href="#toolkit" class="block py-1">Toolkit</a><a href="#education" class="block py-1">Education</a><a href="#contact" class="block py-1 font-semibold">Contact →</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="max-w-[1120px] mx-auto px-6 pt-10 md:pt-16 pb-8">
+  <div class="grid md:grid-cols-[1.22fr_0.78fr] gap-8 md:gap-10 items-start">
+    <div class="fade-up">
+      <div class="inline-flex items-center gap-2.5 text-[11px] font-mono tracking-widest uppercase text-zinc-500 mb-6">
+        <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span> Available for internships · Tehran, Iran
+      </div>
+      <h1 class="text-[42px] md:text-[66px] font-black leading-[0.88] tracking-[-0.045em]">
+        Mahyar<br>
+        <span class="text-zinc-300">Rezaie Poor</span><br>
+        Khalili
+      </h1>
+      <p class="mt-6 text-[15.5px] leading-[1.7] text-zinc-600 max-w-[560px]">
+        Computer Engineering @ <span class="font-semibold text-black">Sharif University of Technology</span> — I build <span class="font-semibold text-black">backend systems, ML applications, and LLM-based tools</span> with a focus on practical, maintainable software.
+      </p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="#work" class="bg-black text-white px-6 py-3 rounded-full text-sm font-semibold hover:opacity-90 transition">Selected work ↓</a>
+        <a href="https://github.com/Mahyarelect" target="_blank" rel="noopener" class="px-6 py-3 rounded-full border border-black/10 bg-white text-sm font-medium hover:bg-black hover:text-white transition">github.com/Mahyarelect</a>
+        <a href="https://codecode.ir" target="_blank" rel="noopener" class="hidden sm:inline-flex px-6 py-3 rounded-full border border-black/10 bg-white text-sm font-medium hover:bg-black hover:text-white transition">codecode.ir</a>
+      </div>
+      <div class="mt-6 flex flex-wrap gap-2 font-mono text-[11px]">
+        <span class="px-3 py-1.5 rounded-full bg-white border">Data Engineering</span>
+        <span class="px-3 py-1.5 rounded-full bg-white border">Machine Learning</span>
+        <span class="px-3 py-1.5 rounded-full bg-white border">AI Agents</span>
+        <span class="px-3 py-1.5 rounded-full bg-black text-white">RAG · LLM</span>
+      </div>
+      <div class="mt-4 flex gap-4 text-[13px] font-mono text-zinc-500">
+        <a href="mailto:mahyarelect@gmail.com" class="hover:text-black">mahyarelect@gmail.com</a>
+        <span class="text-zinc-300">·</span>
+        <a href="mailto:mahyar.rezaee84@sharif.edu" class="hover:text-black">mahyar.rezaee84@sharif.edu</a>
+      </div>
+    </div>
+
+    <!-- RIGHT FOCUS CARD — typographic, no photo -->
+    <div class="fade-up-2 relative">
+      <div class="rounded-[24px] bg-white border border-black/5 overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
+        <div class="grid-pattern h-[196px] relative p-7 flex flex-col justify-end">
+          <div class="absolute top-6 right-6 w-10 h-10 rounded-full bg-black text-white grid place-items-center font-mono text-[11px] font-semibold tracking-widest">MR</div>
+          <div class="absolute top-6 left-7 text-[10px] font-mono tracking-[0.18em] uppercase text-zinc-400">Focus — 2026</div>
+          <div class="text-[11px] font-mono tracking-widest uppercase text-zinc-500">Specialization</div>
+          <h3 class="text-[30px] font-black leading-[0.95] tracking-tight mt-1">Data · ML ·<br>AI Engineering</h3>
+          <div class="mt-3 h-[3px] w-12 bg-black rounded-full"></div>
+        </div>
+        <div class="p-6 pt-5">
+          <p class="text-[13.5px] leading-5 text-zinc-600">Interested in backend engineering, machine learning, and AI systems that solve real problems. Clean code, reproducible deploys, measurable impact.</p>
+          <div class="mt-5 grid grid-cols-2 gap-3 text-xs">
+            <a href="mailto:mahyar.rezaee84@sharif.edu" class="rounded-xl bg-zinc-50 p-3 border hover:bg-zinc-100 transition">
+              <div class="text-[10px] tracking-widest uppercase text-zinc-500 font-mono">Academic</div><div class="font-medium truncate mt-1">mahyar.rezaee84@sharif.edu</div>
+            </a>
+            <a href="mailto:mahyarelect@gmail.com" class="rounded-xl bg-zinc-50 p-3 border hover:bg-zinc-100 transition">
+              <div class="text-[10px] tracking-widest uppercase text-zinc-500 font-mono">Personal</div><div class="font-medium truncate mt-1">mahyarelect@gmail.com</div>
+            </a>
+          </div>
+          <div class="mt-3 grid grid-cols-2 gap-2 text-[11px] font-mono">
+            <a href="https://github.com/Mahyarelect" target="_blank" class="text-center py-2.5 rounded-full bg-black text-white hover:opacity-90 transition">GitHub →</a>
+            <a href="https://github.com/thisiscodecode" target="_blank" class="text-center py-2.5 rounded-full border hover:bg-black hover:text-white transition">thisiscodecode →</a>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:flex absolute -bottom-4 -left-4 bg-black text-white rounded-2xl px-4 py-3 items-center gap-3 shadow-xl">
+        <div class="w-8 h-8 rounded-full bg-white/15 grid place-items-center text-sm">✦</div>
+        <div class="text-xs leading-tight"><div class="font-semibold">Sharif University</div><div class="opacity-60">B.Sc. Computer Engineering · 2023 — Present</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="max-w-[1120px] mx-auto px-6 pt-12 md:pt-16">
+  <div class="flex flex-wrap items-end justify-between gap-4 mb-7">
+    <div>
+      <div class="text-[11px] font-mono tracking-widest uppercase text-zinc-500">Selected work</div>
+      <h2 class="text-[34px] md:text-[38px] font-black tracking-tight leading-none mt-1">Projects</h2>
+    </div>
+    <p class="text-xs md:text-[13px] leading-5 text-zinc-500 max-w-[380px]">Recent work across retrieval systems, full-stack products, networking, and systems programming. All built to be practical and reproducible.</p>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-5">
+    <article class="card bg-white rounded-[20px] border border-black/5 p-6 md:p-7 hover:shadow-lg transition duration-300">
+      <div class="flex justify-between items-center">
+        <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-black text-white">2026 · Featured</span>
+        <span class="text-[11px] font-mono text-zinc-500">RAG · Production</span>
+      </div>
+      <h3 class="mt-4 text-[18px] font-bold leading-tight">LLM Document Q&A — RAG Backend</h3>
+      <p class="mt-2 text-[13.5px] leading-5 text-zinc-600">Production-ready RAG API where users upload DOCX and receive grounded answers via <b class="text-zinc-900 font-semibold">BM25 retrieval + LLM reranking</b> through OpenRouter. One-command Docker Compose deploy.</p>
+      <ul class="mt-3 text-[13px] leading-5 text-zinc-600 list-disc pl-5 space-y-1">
+        <li>BM25 lexical retrieval + LLM reranking</li>
+        <li>Docker Compose for reproducible deployment</li>
+      </ul>
+      <div class="mt-4 flex flex-wrap gap-1.5">
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-900 text-white rounded-full">Python</span>
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">Django · DRF</span>
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">LangChain</span>
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">Docker</span>
+      </div>
+    </article>
+
+    <article class="card bg-white rounded-[20px] border border-black/5 p-6 md:p-7 hover:shadow-lg transition duration-300">
+      <div class="flex justify-between items-center">
+        <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-zinc-100 border">2026</span>
+        <span class="text-[11px] font-mono text-zinc-500">Full-Stack</span>
+      </div>
+      <h3 class="mt-4 text-[18px] font-bold leading-tight">Spotify — Music Streaming Platform</h3>
+      <p class="mt-2 text-[13.5px] leading-5 text-zinc-600">Full-stack streaming app with auth, user/artist workflows, subscriptions and role-based access. Structured REST APIs with JWT + PostgreSQL, React frontend.</p>
+      <ul class="mt-3 text-[13px] leading-5 text-zinc-600 list-disc pl-5 space-y-1">
+        <li>JWT auth, role-based subscriptions</li>
+        <li>Django REST + PostgreSQL · React/TypeScript</li>
+      </ul>
+      <div class="mt-4 flex flex-wrap gap-1.5">
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">React · TypeScript</span>
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">Django</span>
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">PostgreSQL · JWT</span>
+      </div>
+    </article>
+
+    <article class="card bg-white rounded-[20px] border border-black/5 p-6 md:p-7 hover:shadow-lg transition duration-300">
+      <div class="flex justify-between items-center">
+        <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-zinc-100 border">2026</span>
+        <span class="text-[11px] font-mono text-zinc-500">Frontend · RTL</span>
+      </div>
+      <h3 class="mt-4 text-[18px] font-bold leading-tight">Coffee Glacé — Coffee Shop Website</h3>
+      <p class="mt-2 text-[13.5px] leading-5 text-zinc-600">Responsive Persian RTL coffee-shop with animated product menus, category navigation, pricing and mobile-first layouts. Prisma/SQLite, standalone deploy.</p>
+      <div class="mt-4 flex flex-wrap gap-1.5">
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">Next.js · TypeScript</span>
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">Tailwind CSS</span>
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">Framer Motion</span>
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">Prisma</span>
+      </div>
+    </article>
+
+    <article class="card bg-white rounded-[20px] border border-black/5 p-6 md:p-7 hover:shadow-lg transition duration-300">
+      <div class="flex justify-between items-center">
+        <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-zinc-100 border">2026</span>
+        <span class="text-[11px] font-mono text-zinc-500">No-Backend</span>
+      </div>
+      <h3 class="mt-4 text-[18px] font-bold leading-tight">ImplementNotion — Note-Taking App</h3>
+      <p class="mt-2 text-[13.5px] leading-5 text-zinc-600">Notion-inspired browser app: folders, search, sorting, pinned notes & Markdown live preview. localStorage persistence + JSON import/export, dark mode.</p>
+      <div class="mt-4 flex flex-wrap gap-1.5">
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">JavaScript</span>
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">Markdown</span>
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">LocalStorage</span>
+      </div>
+    </article>
+
+    <article class="card bg-white rounded-[20px] border border-black/5 p-6 md:p-7 hover:shadow-lg transition duration-300">
+      <div class="flex justify-between items-center">
+        <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-zinc-100 border">2024</span>
+        <span class="text-[11px] font-mono text-zinc-500">Networking</span>
+      </div>
+      <h3 class="mt-4 text-[18px] font-bold leading-tight">Gwent Online — Multiplayer Card Game</h3>
+      <p class="mt-2 text-[13.5px] leading-5 text-zinc-600">JavaFX recreation of Gwent with real-time multiplayer over TCP sockets. Clean MVC separating game logic, networking & UI layers.</p>
+      <div class="mt-4 flex flex-wrap gap-1.5">
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">Java</span>
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">JavaFX</span>
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">TCP Sockets · MVC</span>
+      </div>
+    </article>
+
+    <article class="card bg-white rounded-[20px] border border-black/5 p-6 md:p-7 hover:shadow-lg transition duration-300">
+      <div class="flex justify-between items-center">
+        <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-zinc-100 border">2023</span>
+        <span class="text-[11px] font-mono text-zinc-500">Systems</span>
+      </div>
+      <h3 class="mt-4 text-[18px] font-bold leading-tight">Sgit — Custom Version Control System</h3>
+      <p class="mt-2 text-[13.5px] leading-5 text-zinc-600">Git-inspired VCS from scratch in C: init, add, commit, log, diff, merge, reset & stash. Direct Linux filesystem management, no third-party libs.</p>
+      <div class="mt-4 flex flex-wrap gap-1.5">
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">C</span>
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-zinc-50 border rounded-full">Linux Filesystem</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- TOOLKIT + EDUCATION -->
+<section id="toolkit" class="max-w-[1120px] mx-auto px-6 pt-10 grid lg:grid-cols-[1.65fr_0.85fr] gap-6 fade-up-3">
+  <div class="bg-white rounded-[24px] border border-black/5 p-6 md:p-8">
+    <div class="text-[11px] font-mono tracking-widest uppercase text-zinc-500">Toolkit</div>
+    <h3 class="text-[22px] font-black tracking-tight mt-1">Built for shipping</h3>
+    <p class="text-[13px] text-zinc-500 mt-1">Practical stack — from data to deploy.</p>
+    <div class="mt-6 grid sm:grid-cols-2 gap-6 text-sm">
+      <div>
+        <div class="text-[11px] font-mono tracking-widest uppercase text-zinc-500 mb-2.5">ML / Data</div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1.5 rounded-full bg-black text-white text-xs font-medium">Python</span>
+          <span class="px-2.5 py-1.5 rounded-full bg-zinc-50 border text-xs">Pandas</span>
+          <span class="px-2.5 py-1.5 rounded-full bg-zinc-50 border text-xs">NumPy</span>
+          <span class="px-2.5 py-1.5 rounded-full bg-zinc-50 border text-xs">Scikit-learn</span>
+          <span class="px-2.5 py-1.5 rounded-full bg-zinc-50 border text-xs">Keras</span>
+          <span class="px-2.5 py-1.5 rounded-full bg-zinc-50 border text-xs">Matplotlib · Seaborn</span>
+        </div>
+      </div>
+      <div>
+        <div class="text-[11px] font-mono tracking-widest uppercase text-zinc-500 mb-2.5">AI / LLM</div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1.5 rounded-full bg-black text-white text-xs font-medium">LangChain</span>
+          <span class="px-2.5 py-1.5 rounded-full bg-zinc-50 border text-xs">RAG</span>
+          <span class="px-2.5 py-1.5 rounded-full bg-zinc-50 border text-xs">BM25 Retrieval</span>
+          <span class="px-2.5 py-1.5 rounded-full bg-zinc-50 border text-xs">OpenRouter</span>
+        </div>
+      </div>
+      <div>
+        <div class="text-[11px] font-mono tracking-widest uppercase text-zinc-500 mb-2.5">Backend / DevOps</div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1.5 rounded-full bg-zinc-50 border text-xs">Django · DRF</span>
+          <span class="px-2.5 py-1.5 rounded-full bg-zinc-50 border text-xs">Docker · Compose</span>
+          <span class="px-2.5 py-1.5 rounded-full bg-zinc-50 border text-xs">Linux · Git · GitHub</span>
+          <span class="px-2.5 py-1.5 rounded-full bg-zinc-50 border text-xs">PostgreSQL · MongoDB</span>
+        </div>
+      </div>
+      <div>
+        <div class="text-[11px] font-mono tracking-widest uppercase text-zinc-500 mb-2.5">Web / Frontend</div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1.5 rounded-full bg-zinc-50 border text-xs">React · Next.js</span>
+          <span class="px-2.5 py-1.5 rounded-full bg-zinc-50 border text-xs">TypeScript</span>
+          <span class="px-2.5 py-1.5 rounded-full bg-zinc-50 border text-xs">Tailwind CSS</span>
+          <span class="px-2.5 py-1.5 rounded-full bg-zinc-50 border text-xs">REST APIs</span>
+        </div>
+      </div>
+    </div>
+    <div class="mt-6 pt-5 border-t text-xs text-zinc-500 font-mono">Concepts: OOP · Systems Programming · DevOps Culture · Monitoring Basics · HTTP/HTTPS · DOM · Responsive Design</div>
+  </div>
+
+  <div id="education" class="space-y-6">
+    <div class="bg-black text-white rounded-[24px] p-7 md:p-8">
+      <div class="text-[11px] font-mono tracking-widest uppercase opacity-60">Education</div>
+      <h3 class="text-[22px] font-black leading-tight mt-1">Sharif University<br>of Technology</h3>
+      <div class="mt-3 text-sm opacity-80 leading-5">B.Sc. Computer Engineering<br>Tehran · 2023 — Present</div>
+      <div class="mt-4 inline-flex text-[11px] font-mono px-3 py-1.5 rounded-full bg-white text-black font-semibold">Top-ranked in Iran · CE Dept.</div>
+      <div class="mt-7 pt-6 border-t border-white/15">
+        <div class="text-[11px] font-mono tracking-widest uppercase opacity-60">Certification</div>
+        <div class="mt-2 text-sm font-medium">Practical Linux Training · Quera</div>
+      </div>
+      <div class="mt-6 pt-6 border-t border-white/15">
+        <div class="text-[11px] font-mono tracking-widest uppercase opacity-60">Languages</div>
+        <div class="mt-2 flex flex-wrap gap-2 text-xs font-mono">
+          <span class="px-2.5 py-1 rounded-full bg-white text-black">Persian — Native</span>
+          <span class="px-2.5 py-1 rounded-full bg-white/15 border border-white/15">English — Professional</span>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white rounded-[24px] border border-black/5 p-6">
+      <div class="text-[11px] font-mono tracking-widest uppercase text-zinc-500">Soft Skills</div>
+      <p class="mt-3 text-xs leading-6 text-zinc-600">Teamwork · Clear Communication · Documentation-Driven Learning · Complex Problem Solving · Curiosity & Deep Learning · Knowledge Sharing · Reliable & Hardworking</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="max-w-[1120px] mx-auto px-6 pt-10 pb-8">
+  <div class="bg-white rounded-[24px] border border-black/5 p-6 md:p-10">
+    <div class="flex flex-col md:flex-row justify-between gap-8">
+      <div>
+        <div class="text-[11px] font-mono tracking-widest uppercase text-zinc-500">Contact</div>
+        <h3 class="text-[28px] font-black tracking-tight mt-1">Get in touch</h3>
+        <p class="mt-2 text-sm text-zinc-600 max-w-[420px]">Open to internships, collaborations and backend / AI engineering roles. Email is the fastest way.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="mailto:mahyarelect@gmail.com" class="bg-black text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition">mahyarelect@gmail.com</a>
+          <a href="mailto:mahyar.rezaee84@sharif.edu" class="px-5 py-2.5 rounded-full border bg-zinc-50 text-sm font-medium hover:bg-white transition">mahyar.rezaee84@sharif.edu</a>
+        </div>
+        <div class="mt-3 flex gap-2">
+          <button onclick="navigator.clipboard.writeText('mahyarelect@gmail.com'); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy email',1500)" class="text-xs font-mono px-3 py-1.5 rounded-full border hover:bg-black hover:text-white transition">Copy email</button>
+          <a href="tel:+989100448498" class="text-xs font-mono px-3 py-1.5 rounded-full border hover:bg-black hover:text-white transition">+98 910 044 8498</a>
+        </div>
+      </div>
+      <div class="md:text-right space-y-4 text-sm min-w-[220px]">
+        <div><div class="text-[11px] font-mono uppercase tracking-widest text-zinc-500">GitHub</div><a href="https://github.com/Mahyarelect" target="_blank" class="font-medium hover:underline">github.com/Mahyarelect</a><br><a href="https://github.com/thisiscodecode" target="_blank" class="font-medium hover:underline text-zinc-500">github.com/thisiscodecode</a></div>
+        <div><div class="text-[11px] font-mono uppercase tracking-widest text-zinc-500">Website</div><a href="https://codecode.ir" target="_blank" class="font-medium hover:underline">codecode.ir</a></div>
+        <div><div class="text-[11px] font-mono uppercase tracking-widest text-zinc-500">Location</div><div class="font-medium">Tehran, Iran</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center text-[11px] font-mono text-zinc-400 mt-6">© <span id="year"></span> Mahyar Rezaie Poor Khalili — Built for GitHub Pages · Tailwind CSS · No photo, just work.</div>
+</section>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('menuBtn').onclick = () => document.getElementById('mobileNav').classList.toggle('hidden');
+document.querySelectorAll('#mobileNav a').forEach(a=>a.onclick=()=>document.getElementById('mobileNav').classList.add('hidden'));
+</script>
+</body>
+</html>
