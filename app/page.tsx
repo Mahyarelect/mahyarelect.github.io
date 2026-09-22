@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUpRight, Copy, GitBranch, Globe, Mail, Phone } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Copy, Globe, Mail, Phone } from 'lucide-react';
 
 const projects = [
   {
@@ -7,6 +7,7 @@ const projects = [
     description: 'Production-ready RAG API where users upload DOCX and get grounded answers via BM25 retrieval + LLM reranking through OpenRouter. One-command Docker Compose deploy.',
     stack: ['Python', 'Django · DRF', 'LangChain', 'OpenRouter', 'Docker'],
     featured: true,
+    repo: 'https://github.com/thisiscodecode/llm_document_qa',
   },
   {
     year: '2026',
@@ -14,6 +15,7 @@ const projects = [
     description: 'Full-stack streaming app with auth, user/artist workflows, subscriptions & role-based access. REST APIs with JWT + PostgreSQL, React frontend.',
     stack: ['React · TypeScript', 'Django', 'PostgreSQL · JWT'],
     featured: false,
+    repo: 'https://github.com/Mahyarelect/spotify-project',
   },
   {
     year: '2026',
@@ -21,6 +23,7 @@ const projects = [
     description: 'Responsive Persian RTL coffee-shop with animated menus, category navigation & mobile-first layouts. Prisma/SQLite, standalone deploy.',
     stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Prisma'],
     featured: false,
+    repo: 'https://github.com/thisiscodecode/coffee-shop',
   },
   {
     year: '2026',
@@ -28,6 +31,7 @@ const projects = [
     description: 'Notion-inspired browser app: folders, search, pinned notes & Markdown live preview. localStorage + JSON import/export, no backend needed.',
     stack: ['JavaScript', 'Markdown', 'LocalStorage'],
     featured: false,
+    repo: 'https://github.com/Mahyarelect/implementNotion',
   },
   {
     year: '2024',
@@ -42,6 +46,7 @@ const projects = [
     description: 'Git-inspired VCS from scratch in C: init, add, commit, log, diff, merge, reset & stash. Direct Linux filesystem, no third-party libs.',
     stack: ['C', 'Linux Filesystem'],
     featured: false,
+    repo: 'https://github.com/Mahyarelect/Sgit',
   },
 ];
 
@@ -140,21 +145,46 @@ export default function Home() {
             <p className="max-w-[380px] text-sm leading-6 text-[var(--muted-ink)]">Recent work across retrieval systems, full-stack products, networking, and systems programming.</p>
           </div>
           <div className="grid gap-px overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--line)] md:grid-cols-2">
-            {projects.map((project) => (
-              <article key={project.title} className="group bg-[var(--card)] p-7 transition-colors hover:bg-white sm:p-8">
-                <div className="flex items-center justify-between">
-                  <span className={`rounded-full px-2.5 py-1 font-mono text-[11px] ${project.featured ? 'bg-[var(--ink)] text-white' : 'border bg-zinc-50'}`}>{project.year} {project.featured ? '· Featured' : ''}</span>
-                  <span className="font-mono text-[11px] text-[var(--muted-ink)]">{project.stack[0]}</span>
-                </div>
-                <h3 className="mt-6 text-[18px] font-semibold tracking-[-0.03em]">{project.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-[var(--muted-ink)]">{project.description}</p>
-                <div className="mt-4 flex flex-wrap gap-1.5">
-                  {project.stack.map((t) => (
-                    <span key={t} className="rounded-full border bg-zinc-50 px-2.5 py-1 font-mono text-[11px] text-[var(--muted-ink)]">{t}</span>
-                  ))}
-                </div>
-              </article>
-            ))}
+            {projects.map((project) => {
+              const body = (
+                <>
+                  <div className="flex items-center justify-between">
+                    <span className={`rounded-full px-2.5 py-1 font-mono text-[11px] ${project.featured ? 'bg-[var(--ink)] text-white' : 'border bg-zinc-50'}`}>{project.year} {project.featured ? '· Featured' : ''}</span>
+                    <span className="font-mono text-[11px] text-[var(--muted-ink)]">{project.stack[0]}</span>
+                  </div>
+                  <h3 className="mt-6 text-[18px] font-semibold tracking-[-0.03em]">{project.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-[var(--muted-ink)]">{project.description}</p>
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {project.stack.map((t) => (
+                      <span key={t} className="rounded-full border bg-zinc-50 px-2.5 py-1 font-mono text-[11px] text-[var(--muted-ink)]">{t}</span>
+                    ))}
+                  </div>
+                  {project.repo && (
+                    <span className="mt-5 inline-flex items-center gap-1.5 font-mono text-xs text-[var(--muted-ink)] group-hover:text-[var(--ink)] transition-colors">
+                      View repository on GitHub <ArrowUpRight className="h-3.5 w-3.5" />
+                    </span>
+                  )}
+                </>
+              );
+              if (project.repo) {
+                return (
+                  <a
+                    key={project.title}
+                    href={project.repo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group block bg-[var(--card)] p-7 transition-colors hover:bg-white sm:p-8"
+                  >
+                    {body}
+                  </a>
+                );
+              }
+              return (
+                <article key={project.title} className="group bg-[var(--card)] p-7 transition-colors hover:bg-white sm:p-8">
+                  {body}
+                </article>
+              );
+            })}
           </div>
         </section>
 
