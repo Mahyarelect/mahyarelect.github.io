@@ -328,7 +328,7 @@ export default function Home() {
               <div>
                 <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--muted-ink)]">AI / LLM</div>
                 <div className="mt-2 flex flex-wrap gap-1.5">
-                  {['LangChain','RAG','BM25 Retrieval','OpenRouter'].map(s=> <span key={s} className="rounded-full border bg-zinc-50 px-2.5 py-1.5 text-xs transition-colors hover:border-[var(--accent)] hover:bg-white hover:text-[var(--accent)]">{s}</span>)}
+                  {['LangChain','RAG','LlamaIndex','FAISS · Chroma','Hugging Face','OpenAI · Anthropic APIs'].map(s=> <span key={s} className="rounded-full border bg-zinc-50 px-2.5 py-1.5 text-xs transition-colors hover:border-[var(--accent)] hover:bg-white hover:text-[var(--accent)]">{s}</span>)}
                 </div>
               </div>
               <div>
@@ -352,10 +352,17 @@ export default function Home() {
               <p className="font-mono text-[11px] uppercase tracking-[0.16em] opacity-60">Education</p>
               <h3 className="mt-2 text-[22px] font-semibold leading-tight">Sharif University<br />of Technology</h3>
               <p className="mt-3 text-sm leading-6 opacity-80">B.Sc. Computer Engineering<br />Tehran · 2023 — Present</p>
-              <div className="mt-4 inline-flex rounded-full bg-white px-3 py-1.5 font-mono text-[11px] font-semibold text-black">Top-ranked in Iran · CE Dept.</div>
               <div className="mt-7 border-t border-white/15 pt-6">
                 <p className="font-mono text-[11px] uppercase tracking-[0.16em] opacity-60">Certification</p>
-                <p className="mt-2 text-sm font-medium">Practical Linux Training · Quera</p>
+                <a
+                  href="https://quera.org/media/public/quera_certificate/d922d532f37f47a3826ca023936f3c8e.jpg"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-2 inline-flex items-center gap-1.5 text-sm font-medium transition-colors hover:text-[var(--accent)]"
+                >
+                  Practical Linux Training · Quera
+                  <ArrowUpRight className="h-3 w-3 opacity-50" />
+                </a>
               </div>
               <div className="mt-6 border-t border-white/15 pt-6">
                 <p className="font-mono text-[11px] uppercase tracking-[0.16em] opacity-60">Languages</p>
@@ -414,10 +421,6 @@ export default function Home() {
 
         <footer className="flex flex-col gap-2 border-t border-[var(--line)] py-6 text-xs text-[var(--muted-ink)] sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Mahyar Rezaie Poor Khalili</p>
-          <div className="flex flex-wrap items-center gap-4">
-            <p className="font-mono">Tehran, Iran · Built with Vinext · Deploys to GitHub Pages</p>
-            <a href="#top" className="font-medium text-[var(--ink)] transition-colors hover:text-[var(--accent)]">Back to top ↑</a>
-          </div>
         </footer>
       </div>
     </main>
