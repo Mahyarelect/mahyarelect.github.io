@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { ArrowDown, ArrowUpRight, Copy, GitBranch, Globe, Mail, Phone } from 'lucide-react';
 
 const projects = [
@@ -156,7 +157,7 @@ export default function Home() {
           </nav>
         </header>
 
-        {/* HERO — no photo, typographic only */}
+        {/* HERO */}
         <section id="top" className="grid items-center gap-10 py-12 sm:gap-14 sm:py-20 lg:grid-cols-[1.22fr_0.78fr] lg:py-24">
           <div>
             <p
@@ -210,6 +211,15 @@ export default function Home() {
             style={enter(0.24)}
             className="relative overflow-hidden rounded-[24px] border border-[var(--line)] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md"
           >
+            <Image
+              src="/mahyar.jpg"
+              alt="Mahyar Rezaie Poor Khalili in a green forest"
+              width={640}
+              height={640}
+              priority
+              unoptimized
+              className="aspect-square w-full object-cover"
+            />
             <div aria-hidden="true" className="h-1 w-full bg-gradient-to-r from-[var(--accent)] via-[var(--accent)]/40 to-transparent" />
             <div className="bg-[linear-gradient(to_right,var(--grid)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid)_1px,transparent_1px)] bg-[size:24px_24px] p-7">
               <div className="flex items-start justify-between">
