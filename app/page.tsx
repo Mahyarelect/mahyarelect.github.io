@@ -218,7 +218,7 @@ export default function Home() {
               height={640}
               priority
               unoptimized
-              className="aspect-square w-full object-cover"
+              className="mx-auto my-6 aspect-square w-40 rounded-2xl object-cover sm:w-48"
             />
             <div aria-hidden="true" className="h-1 w-full bg-gradient-to-r from-[var(--accent)] via-[var(--accent)]/40 to-transparent" />
             <div className="bg-[linear-gradient(to_right,var(--grid)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid)_1px,transparent_1px)] bg-[size:24px_24px] p-7">
