@@ -218,7 +218,7 @@ export default function Home() {
               height={640}
               priority
               unoptimized
-              className="block h-56 w-full object-cover object-[center_55%] sm:h-60"
+              className="block h-auto w-full"
             />
             <div aria-hidden="true" className="h-1 w-full bg-gradient-to-r from-[var(--accent)] via-[var(--accent)]/40 to-transparent" />
             <div className="bg-[linear-gradient(to_right,var(--grid)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid)_1px,transparent_1px)] bg-[size:24px_24px] p-7">
